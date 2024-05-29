@@ -14,10 +14,18 @@ a {
     text-decoration: none; /* Remove default underline */
 }
 
+.project a {
+    color: #000000; /* Set link color to black */
+}
+
+.contact-box a {
+    color: #ac0b0b; /* Set link color to black */
+}
+
+
 a:hover {
     text-decoration: underline; /* Underline on hover */
 }
-
 
 header {
     background: rgba(0, 0, 0, 0.6);
@@ -68,15 +76,19 @@ h2 {
     margin-bottom: 1rem;
 }
 
-.profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.profile, .skills-left, .skills-right, .project, .contact-box {
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     color: #333;
     text-shadow: none;
+    margin-bottom: 20px; /* Add margin to separate the sections */
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile img {
@@ -86,14 +98,30 @@ h2 {
     margin-bottom: 20px;
 }
 
-
 .about-text {
-    text-align: center;
-    text-align: justify;
+    text-align: justify; /* Justify the text */
 }
 
-.project {
-    margin-bottom: 1rem;
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; /* Add space between the two sections */
+}
+
+.skills-left,
+.skills-right {
+    width: 45%; /* Adjust width to fit side by side */
+}
+
+.skills-left ul,
+.skills-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-left li,
+.skills-right li {
+    margin-bottom: 10px;
 }
 
 footer {
